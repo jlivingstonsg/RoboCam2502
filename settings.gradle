@@ -1,0 +1,3 @@
+include ':tinyhttpd'
+include ':app'
+rootProject.name = "RoboCam"

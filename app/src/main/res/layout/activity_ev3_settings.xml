@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/ev3_settings_main_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="1" style="@style/Widget.AppCompat.ActionBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false" style="@style/Widget.AppCompat.ActionBar">
+            <ImageButton android:id="@+id/imageButtonBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+            <Button android:id="@+id/buttonCancel" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView8" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+            <Button android:id="@+id/buttonSave" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" android:onClick="onSaveButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView9" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+            <ImageButton android:id="@+id/buttonOverflow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/overflow" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/textView6" android:text="@string/general_information" style="@style/SettingsSectionTitle"/>
+            <TextView android:id="@+id/textViewBotName" android:text="@string/robot_name" style="@style/SettingsSectionEditTextTitle"/>
+            <EditText android:id="@+id/editTextBotName" style="@style/SettingsEditText"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView19" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <TextView android:id="@+id/textViewDesc" android:text="@string/robot_description" style="@style/SettingsSectionEditTextTitle"/>
+            <EditText android:id="@+id/editTextDesc" style="@style/SettingsEditText"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView12" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <CheckBox android:id="@+id/checkBoxShowDebugInfo" android:checked="false" android:text="@string/show_debug_info" style="@style/SettingsCheckBox"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView13" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <CheckBox android:id="@+id/checkBoxHideJoysticks" android:checked="false" android:text="@string/hide_joysticks_while_using_keyboard" style="@style/SettingsCheckBox"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView20" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <CheckBox android:id="@+id/checkBoxStartUserProgram" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="@string/start_user_program" style="@style/SettingsCheckBox"/>
+            <EditText android:id="@+id/editTextUserProgram" style="@style/SettingsEditText"/>
+            <TextView android:id="@+id/textViewJoystick1" android:text="@string/joystick1" style="@style/SettingsSectionTitle"/>
+            <CheckBox android:id="@+id/checkBoxJoystickVisibility1" android:checked="false" android:text="@string/visibility" style="@style/SettingsCheckBox"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView1_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickShape1" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView1_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickType1" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior1_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior1_1" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior1_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior1_2" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewJoystick1Ports" android:text="@string/joystick1_ports" style="@style/SettingsSectionTitle"/>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/linearLayoutJoystick1PortButtons" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+                <Button android:id="@+id/buttonDeletePortJoystick1" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" android:onClick="onDeletePortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView14" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+                <Button android:id="@+id/buttonAddPortJoystick1" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add" android:onClick="onAddPortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutJoystick1Ports" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewJoystick2" android:text="@string/joystick2" style="@style/SettingsSectionTitle"/>
+            <CheckBox android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/checkBoxJoystickVisibility2" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/visibility" style="@style/SettingsCheckBox"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView2_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickShape2" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView2_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickType2" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior2_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior2_1" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior2_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior2_2" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewJoystick2Ports" android:text="@string/joystick2_ports" style="@style/SettingsSectionTitle"/>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/linearLayoutJoystick2PortButtons" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+                <Button android:id="@+id/buttonDeletePortJoystick2" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" android:onClick="onDeletePortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView15" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+                <Button android:id="@+id/buttonAddPortJoystick2" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add" android:onClick="onAddPortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutJoystick2Ports" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewJoystick3" android:text="@string/joystick3" style="@style/SettingsSectionTitle"/>
+            <CheckBox android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/checkBoxJoystickVisibility3" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/visibility" style="@style/SettingsCheckBox"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView3_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickShape3" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView3_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickType3" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior3_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior3_1" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior3_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior3_2" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewJoystick3Ports" android:text="@string/joystick3_ports" style="@style/SettingsSectionTitle"/>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/linearLayoutJoystick3PortButtons" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+                <Button android:id="@+id/buttonDeletePortJoystick3" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" android:onClick="onDeletePortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView16" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+                <Button android:id="@+id/buttonAddPortJoystick3" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add" android:onClick="onAddPortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutJoystick3Ports" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewJoystick4" android:text="@string/joystick4" style="@style/SettingsSectionTitle"/>
+            <CheckBox android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/checkBoxJoystickVisibility4" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/visibility" style="@style/SettingsCheckBox"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView4_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickShape4" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView4_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickType4" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior4_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior4_1" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewJoystickBehavior4_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Spinner android:id="@+id/spinnerJoystickBehavior4_2" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewJoystick4Ports" android:text="@string/joystick4_ports" style="@style/SettingsSectionTitle"/>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/linearLayoutJoystick4PortButtons" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+                <Button android:id="@+id/buttonDeletePortJoystick4" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" android:onClick="onDeletePortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView17" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+                <Button android:id="@+id/buttonAddPortJoystick4" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add" android:onClick="onAddPortButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutJoystick4Ports" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewKeyGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/key_group" style="@style/SettingsSectionTitle"/>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/linearLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+                <Button android:id="@+id/buttonDeleteKeyGroup" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" android:onClick="onDeleteKeyGroupClick" style="@style/Widget.AppCompat.ActionButton"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView18" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+                <Button android:id="@+id/buttonAddKeyGroup" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add" android:onClick="onAddKeyGroupButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutKeyGroups" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

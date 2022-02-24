@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/robocam_background"
+        android:visibility="gone" />
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
+    <WebView
+        android:id="@+id/banner"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/banner_320x50" />
+
+    <ImageView
+        android:id="@+id/robotMessageConnector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/robot_connector" />
+
+    <ImageView
+        android:id="@+id/serverMessageConnector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnServerBackground"
+        android:layout_alignBottom="@+id/imageView6"
+        android:src="@drawable/server_connector" />
+
+    <TextView
+        android:id="@+id/serverMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dummyView1"
+        android:layout_alignLeft="@+id/serverMessageConnector"
+        android:layout_alignRight="@+id/btnSettings"
+        android:background="@drawable/server_frame"
+        android:text="@string/server_is_off"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/robotMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dummyView2"
+        android:layout_alignLeft="@+id/btnServerBackground"
+        android:layout_alignRight="@+id/btnSettings"
+        android:background="@drawable/robot_frame"
+        android:text="@string/server_is_off"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btnRobotBackground"
+        android:src="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btnRobotBackground"
+        android:src="@drawable/empty" />
+
+    <ImageButton
+        android:id="@+id/btnRobotBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/robot_connecting_bg" />
+
+    <ImageButton
+        android:id="@+id/btnRobot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/connect_robot_bg"
+        android:onClick="onConnectToRobot" />
+
+    <ImageButton
+        android:id="@+id/btnServerBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnRobotBackground"
+        android:layout_toLeftOf="@+id/imageView6"
+        android:background="@drawable/server_starting_bg"
+        android:focusable="false" />
+
+    <ImageButton
+        android:id="@+id/btnLocalControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnRobotBackground"
+        android:layout_toLeftOf="@+id/imageView6"
+        android:background="@drawable/local_controls_bg"
+        android:onClick="onLocalControlsButtonClick"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btnServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnRobotBackground"
+        android:layout_toLeftOf="@+id/imageView6"
+        android:background="@drawable/start_server_bg"
+        android:onClick="onStartButtonClick" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnRobotBackground"
+        android:layout_toRightOf="@+id/imageView5"
+        android:background="@drawable/settings_bg"
+        android:onClick="onSettingsButtonClick" />
+
+    <ListView
+        android:id="@+id/robotListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dummyView2"
+        android:layout_alignLeft="@+id/robotMessage"
+        android:layout_alignRight="@+id/robotMessage"
+        android:background="@drawable/robot_frame" />
+
+    <ImageView
+        android:id="@+id/dummyView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnServerBackground"
+        android:layout_alignLeft="@+id/btnServerBackground"
+        android:src="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/dummyView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRobotBackground"
+        android:layout_toRightOf="@+id/imageView6"
+        android:src="@drawable/empty" />
+
+    <TextView
+        android:id="@+id/testMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+</RelativeLayout>

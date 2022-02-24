@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/robot_settings_list_main_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="1" style="@style/Widget.AppCompat.ActionBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false" style="@style/Widget.AppCompat.ActionBar">
+            <ImageButton android:id="@+id/imageButtonBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+            <Button android:id="@+id/buttonDelete" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" style="@style/Widget.AppCompat.ActionButton"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView10" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+            <Button android:id="@+id/buttonAdd" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add" style="@style/Widget.AppCompat.ActionButton"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView11" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+            <ImageButton android:id="@+id/buttonOverflow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/overflow" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutSubsWarning" android:background="#e90000" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="7dp">
+            <TextView android:textSize="19dp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/textViewSubsWarning" android:background="#e90000" android:paddingLeft="11dp" android:paddingTop="4dp" android:paddingRight="11dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/using_of_the_settings_is_not_available_without_a_subscription"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                <Button android:id="@+id/button3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_subscriptions" style="?android:attr/buttonStyleSmall"/>
+                <Button android:id="@+id/button4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hide" android:onClick="onHideSubsButtonClick" style="?android:attr/buttonStyleSmall"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/textView3" android:text="@string/current_robot_settings" style="@style/SettingsSectionTitle"/>
+        <Spinner android:id="@+id/spinnerCurrentRobotSettings" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textView" android:text="@string/robot_settings_list" style="@style/SettingsSectionTitle"/>
+        <ListView android:layout_gravity="center_horizontal" android:id="@+id/settingsListView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

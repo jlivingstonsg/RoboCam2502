@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="1" style="@style/Widget.AppCompat.ActionBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false" style="@style/Widget.AppCompat.ActionBar">
+            <ImageButton android:id="@+id/imageButtonBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/textView4" android:text="@string/app_settings" style="@style/SettingsSectionTitle"/>
+            <Button android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/buttonServer" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/pref_title_server" android:onClick="onCameraButtonClick" style="@style/Widget.AppCompat.Button.Borderless"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+            <Button android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/buttonRobot" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/pref_totle_robot" android:onClick="onRobotButtonClick" style="@style/Widget.AppCompat.Button.Borderless"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

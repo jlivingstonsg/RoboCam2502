@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="1" style="@style/Widget.AppCompat.ActionBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false" style="@style/Widget.AppCompat.ActionBar">
+            <ImageButton android:id="@+id/imageButtonBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+            <Button android:id="@+id/buttonCancel" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView8" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+            <Button android:id="@+id/buttonSave" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" android:onClick="onSaveButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/titleServer" android:text="@string/pref_title_server" style="@style/SettingsSectionTitle"/>
+            <CheckBox android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/checkBoxUseLocalControls" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/use_local_controls" style="@style/SettingsCheckBox"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutLocal" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <CheckBox android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/checkBoxMaximizeJoysticks" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/JADX_DEOBF_697" style="@style/SettingsCheckBox"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutServer" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/titleCamera" android:text="@string/camera" style="@style/SettingsSectionTitle"/>
+                <Spinner android:id="@+id/spinnerCamera" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView1" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+                <Spinner android:id="@+id/spinnerPreviewSize" android:focusable="false" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView2" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center_horizontal" android:id="@+id/textViewJpegQuality1" android:paddingLeft="11dp" android:paddingTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/jpeg_quality"/>
+                <SeekBar android:id="@+id/seekBarJpegQuality" android:paddingLeft="11dp" android:paddingRight="11dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:progress="60"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textViewJpegQuality2" android:paddingLeft="11dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageViewUseRenderScript" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+                <CheckBox android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/checkBoxUseRenderScript" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/use_render_script" style="@style/SettingsCheckBox"/>
+                <TextView android:id="@+id/titleSecurity" android:text="@string/security" style="@style/SettingsSectionTitle"/>
+                <TextView android:id="@+id/textViewDriverName" android:text="@string/driver_name" style="@style/SettingsSectionEditTextTitle"/>
+                <EditText android:id="@+id/editTextDriverName" style="@style/SettingsEditText"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center_horizontal" android:id="@+id/textViewDriverPassword" android:paddingLeft="11dp" android:paddingTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/driver_password" style="@style/SettingsSectionEditTextTitle"/>
+                <EditText android:layout_gravity="center_horizontal" android:id="@+id/editTextDriverPassword" android:paddingLeft="11dp" android:paddingRight="11dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="textPassword" style="@style/SettingsEditText"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView3" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+                <CheckBox android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/checkBoxAllowSpectators" android:layout_width="match_parent" android:layout_height="@dimen/pref_item_height" android:text="@string/allow_spectators" style="@style/SettingsCheckBox"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView4" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center_horizontal" android:id="@+id/textViewSpectatorName" android:paddingLeft="11dp" android:paddingTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/spectator_name" style="@style/SettingsSectionEditTextTitle"/>
+                <EditText android:layout_gravity="center_horizontal" android:id="@+id/editTextSpectatorName" android:paddingLeft="11dp" android:paddingRight="11dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" android:inputType="none" style="@style/SettingsEditText"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView7" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/spacer_small"/>
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center_horizontal" android:id="@+id/textViewSpectatorPassword" android:paddingLeft="11dp" android:paddingTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/spectator_password" style="@style/SettingsSectionEditTextTitle"/>
+                <EditText android:layout_gravity="center_horizontal" android:id="@+id/editTextSpectatorPassword" android:paddingLeft="11dp" android:paddingRight="11dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="textPassword" style="@style/SettingsEditText"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

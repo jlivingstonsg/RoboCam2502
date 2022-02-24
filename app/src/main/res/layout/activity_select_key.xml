@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/ev3_settings_main_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="1" style="@style/Widget.AppCompat.ActionBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false" style="@style/Widget.AppCompat.ActionBar">
+            <ImageButton android:id="@+id/imageButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1" style="@style/Widget.AppCompat.ActionBar">
+            <Button android:id="@+id/buttonCancel" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:onClick="onCancelButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageView8" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/spacer_small"/>
+            <Button android:id="@+id/buttonSave" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/done" android:onClick="onDoneButtonClick" style="@style/Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@+id/titleTextView" android:text="@string/nothing_selected" android:maxLines="3" android:singleLine="false" style="@style/SettingsSectionTitle"/>
+        <ListView android:layout_gravity="center_horizontal" android:id="@+id/keyListView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
